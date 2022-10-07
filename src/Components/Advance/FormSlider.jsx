@@ -56,7 +56,7 @@ const FormSlider = ({ title, src, cardData }) => {
         </h2>
       </header>
       {/* {body-session} */}
-      <Form className="holder">
+      <Form className="holder mt-4">
         <div
           id="progress"
           style={{
