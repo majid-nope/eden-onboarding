@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: 'Inter', sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --basicTheme: rgb(90, 74, 209);
+}
+
+.box {
+
+  background-color: #F4F6F9;
+  width: 400px;
+  height: 70%;
+}
+
+.box header img {
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+
+
+
+.box .card_item {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #F4F6F9;
+  min-width: 100%;
+  min-height: 100%;
+
+}
+
+.box .slider {
+  transition: all 700ms ease-out;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+
+
+
+
+}
+
+
+
+
+.box .holder {
+  position: relative;
+  display: flex;
+  height: 80%;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+/* usePurpose */
+.active {
+  border: 1px solid var(--basicTheme) !important;
+}
+
+
+
+/* progress */
+#progress {
+  --progressWidth: 0%;
+  --progressCircle: 40px;
+  position: relative;
+  z-index: 1;
+  top: 8%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F4F6F9;
+  height: 2px;
+
+
+}
+
+#progress span {
+  position: relative;
+  width: var(--progressCircle);
+  aspect-ratio: 1/1;
+  text-align: center;
+  padding-top: 3%;
+  border-radius: 50%;
+  color: #F4F6F9;
+  transition: all 1s;
+
+}
+
+#progress::before {
+  position: absolute;
+  content: '';
+  background-color: var(--basicTheme);
+  width: var(--progressWidth);
+  z-index: 0;
+  height: 2px;
+  transition: all 1s;
 }
